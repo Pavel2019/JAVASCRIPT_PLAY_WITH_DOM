@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>buskball</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Optional: Custom Tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af', // Customize if needed
+          },
+        },
+      },
+    };
+  </script>
+</head>
+
+
+<!-- body section starts here  -->
+<body class="bg-blue-200 text-gray-900 container mx-auto">
+
+  <!-- Header section -->
+  <header class="bg-blue-950 container mx-auto">
+    <div class="  mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-primary"><span class="text-white">BUSK</span> <span
+          class="text-yellow-500">BALL</span></h1>
+      <nav class="space-x-5">
+        <a href="#" class="text-yellow-500 hover:text-white text-yellow-500 font-bold">Home</a>
+        <a href="#" class="text-yellow-500 hover:text-white font-bold">About</a>
+        <a href="#" class="text-yellow-500 hover:text-white font-bold">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- CLOSED Header-->
+
+  <main>
+    <!-- Hero Section -->
+    <section class="relative text-center py-20 bg-blue-900 text-white ">
+      <h2 class="text-4xl font-bold mb-4">Welcome to My Website</h2>
+      <p class="text-lg mb-6">This is a simple Tailwind CSS starter template.</p>
+      <a href="#"
+        class="inline-block bg-white text-primary font-semibold px-6 py-3 rounded-full bg-yellow-500 hover:bg-white transition">
+        Get Started
+      </a>
+    </section>
+
+    <!-- Main card-->
+    <section class="bg-blue-950 flex container px-4 ">
+    <!--------- left side----------- -->
+      <div id="cardcontainer" class=" grid gap-6 grid-cols-1  md:grid-cols-2 lg:grid-cols-3  px-4 mt-16 mb-16 ">
+      </div>
+      <!---------right side  ----------- -->
+      <div class="flex flex-col gap-6 mt-16 pl-4">
+        <!---------right (Up)  ----------- -->
+        <div id="right_1st" class="border rounded-lg  border-white h-[auto] w-72 mb-6">
+          <div>
+            <h2 class="text-3xl p-6 text-white font-bold flex justify-center items-center">Selected</h2>
+            <img class="h-[10px] w-[180px] mx-auto mt-[-20px]" src="./img/underline final.png" alt="">
+            <H3 class="text-center text-2xl font-bold my-[20px] text-white underline underline-offset-[10px] ">Player name</H3>
+          </div>
+          <ul id="selected_ul" class="grid md:gap-4 md:pl-5 text-2xl font-semibold mb-8">
+              <!-- -------player list inject here--------- -->
+              <li class="flex justify-between items-center"></li>
+          </ul>
+        </div>
+
+        <!---------right (down))  ----------- -->
+        <div id="right_2nd" class="border border-white rounded-lg  lg:w-72 md:w-42  mt-4">
+          <h2 class="text-2xl p-6 text-white font-bold flex justify-center items-center">Budget</h2>
+          <img class="w-[180px] h-[10px] mx-auto mt-[-20px] mb-8" src="./img/underline final.png" alt="">
+            <div>
+                <label for="p_cost" class=" text-xl font-semibold  text-yellow-500 ml-2">Per player= </label>
+                <input id="P_cost" type="number" name="p-cost"  class=" border-2 border-gray-300 py-1 rounded-full border-gray-300 text-xl w-6/12 " placeholder="Budget_here"  value="1000">
+                <button id="calc" class="bg-yellow-500 w-56 ml-4 py-2 rounded-full font-bold mt-8">Calculate</button>
+            </div>
+          <p id="expenses" class="text-xl p-6 text-white font-bold flex justify-center items-center mb-6">Player Expenses: <span class="font-bold ml-2 text-yellow-500">$00</span></p>
+          
+          <!-- manager cost  -->
+              <label for="p_cost" class=" text-xl font-semibold  text-yellow-500 ml-2">Manager= </label> 
+              <input id="m_cost" type="number" name="p-cost"  class=" border-2 border-gray-300 py-1 rounded-full border-gray-300 text-xl w-6/12 " placeholder=" $200/d "  value="1000"> <br> <br>
+          
+          <!-- coach cost  -->
+            <label for="p_cost" class=" text-xl font-semibold  text-yellow-500 ml-2">coach= </label>
+            <input id="c_cost" type="number" name="p-cost"  class=" border-2 border-gray-300 py-1 rounded-full border-gray-300 text-xl w-7/12 " placeholder=" $300/d "  value="1000"> </P>
+            <button id="final_cost" class="bg-yellow-500 w-56 ml-4 py-2 rounded-full font-bold mt-8">Calculate Total</button>
+          <p id="f_cost" class="text-xl p-8 text-white font-semibold flex justify-center items-center">Total: <span
+              class="font-bold ml-10">$00</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-950 border-t  py-8 text-center text-white"> &copy; 2025 buskball All rights reserved.
+  </footer>
+
+  <!-- scripting  -->
+  <script src="calculation.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
